@@ -1,23 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 .tab-panel {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 10px;
     border-radius: 4px;
   }
   
   .nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
-    border-bottom: 4px solid #fbcdcf;
+    border-bottom: 1px solid #fbcdcf;
   }
   
   .member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
     border: 0;
-    background: none !important;
     color: #333333;
   }
   
   .member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
-    color: #a6a6a6;
+    color: white;
   }
   
   .member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
@@ -25,7 +24,7 @@
   }
   
   .member-tabset > .nav-tabs > li.active {
-    border-bottom: 4px solid #E95420;
+    border-bottom: 2px solid #E95420;
     position: relative;
   }
   
@@ -39,10 +38,9 @@
   }
   
   .member-tabset > .tab-content {
-    margin-top: -3px;
-    background-color: #fff;
+    margin-top: 6px;
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid white;
     padding: 15px 0;
   }
   
