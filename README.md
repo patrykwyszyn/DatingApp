@@ -28,3 +28,5 @@ To run Postgres database locally, use Docker (if you have locally running postgr
 
 To change connection with database go to `.\API\appsettings.Development.json`
 
+## Demo
+####[DatingApp Heroku](https://datingappwyszyn.herokuapp.com/)
