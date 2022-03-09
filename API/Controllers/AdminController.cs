@@ -1,10 +1,15 @@
-﻿using API.Entities;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers;
+namespace API.Controllers
+{
+    
+
 
 public class AdminController : BaseApiController
 {
@@ -63,4 +68,5 @@ public class AdminController : BaseApiController
     {
         return Ok("Admins or moderators can see this");
     }
+}
 }
