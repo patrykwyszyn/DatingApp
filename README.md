@@ -1,19 +1,23 @@
 # Client
 
-This project was generated with .NET 5 and  [Angular CLI](https://github.com/angular/angular-cli) version 12.
+This project was generated with .NET 5 and Angular version 12.
 
 ## Development server
 
-Run `cd .\client\` and then `ng serve` for a client server. Navigate to `http://localhost:4200/`. 
-The app will automatically reload if you change any of the source files.
+Run `cd .\client\` and then `ng serve` for a client server. Navigate to `http://localhost:4200/`.
 
+The app will automatically reload if you change any of the source files. 
+#
 Run `cd .\API\` and then `dotnet watch run` for dev .NET server. 
+
 Navigate to `https://localhost:5001/swagger/index.html` to see auto-generated documentation.
 
 ## Build
 
 To build project hosted on .NET server 
+
 Run `cd .\client\` and then `ng build`, files will be built and save in `.\API\wwwroot`. 
+
 Navigate to `https://localhost:5001/` to see FE part of project or `https://localhost:5001/swagger/index.html` to see auto-generated documentation.
 
 ## Database
