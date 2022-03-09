@@ -1,3 +1,4 @@
+using System;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
@@ -9,6 +10,11 @@ using System.Text;
 using API.Extensions;
 using API.Middleware;
 using API.SignalR;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace API
 {
@@ -39,6 +45,7 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             app.UseMiddleware<ExceptionMiddleware>();
 
             if (env.IsDevelopment())

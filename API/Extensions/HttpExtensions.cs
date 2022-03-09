@@ -1,5 +1,6 @@
 using API.Helpers;
 using System.Text.Json;
+using Microsoft.AspNetCore.Http;
 
 namespace API.Extensions
 {

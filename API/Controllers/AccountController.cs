@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Linq;
+using Microsoft.AspNetCore.Mvc;
 using API.Data;
 using API.Entities;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using API.DTOs;
 using Microsoft.EntityFrameworkCore;
 using API.Interfaces;

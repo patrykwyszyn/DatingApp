@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+using System.IO;
 using API.Entities;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +16,7 @@ namespace API.Data
         {
             if (await userManager.Users.AnyAsync()) return;
 
-            var userData = await File.ReadAllTextAsync("Data/Migrations/UserSeedData.json");
+            var userData = await File.ReadAllTextAsync("Data/UserSeedData.json");
             var users = JsonSerializer.Deserialize<List<AppUser>>(userData);
             if (users == null) return;
 

@@ -5,10 +5,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System;
+using System.Threading.Tasks;
 using CloudinaryDotNet.Actions;
 using CloudinaryDotNet;
 using Microsoft.Extensions.Options;
 using API.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace API.Services
 {
