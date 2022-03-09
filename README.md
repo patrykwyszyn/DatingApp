@@ -1,32 +1,32 @@
 # Client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.
+This project was generated with .NET 5 and Angular version 12.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `cd .\client\` and then `ng serve` for a client server. Navigate to `http://localhost:4200/`.
 
-Run `dotnet watch run` for dev .Ndet server
+The app will automatically reload if you change any of the source files. 
+#
+Run `cd .\API\` and then `dotnet watch run` for dev .NET server. 
 
-To run Postgres database locally, use Docker (if you have locally running postgres change port e.g 5433:5432)
-`docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=Passw0rd -p 5432:5432 -d postgres:latest`
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigate to `https://localhost:5001/swagger/index.html` to see auto-generated documentation.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To build project hosted on .NET server 
 
-## Running unit tests
+Run `cd .\client\` and then `ng build`, files will be built and save in `.\API\wwwroot`. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Navigate to `https://localhost:5001/` to see FE part of project or `https://localhost:5001/swagger/index.html` to see auto-generated documentation.
 
-## Running end-to-end tests
+## Database
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+To run Postgres database locally, use Docker (if you have locally running postgres change port e.g 5433:5432).
 
-## Further help
+`docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=Passw0rd -p 5432:5432 -d postgres:latest`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To change connection with database go to `.\API\appsettings.Development.json`
+
+## Demo
+####[DatingApp Heroku](https://datingappwyszyn.herokuapp.com/)
