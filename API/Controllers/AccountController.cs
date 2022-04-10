@@ -1,9 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using API.Data;
 using API.Entities;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using API.DTOs;
 using Microsoft.EntityFrameworkCore;
@@ -59,16 +56,18 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
+            if(loginDto.Password == null || loginDto.Username == null) return Unauthorized("Invalid credentials");
+            
             var user = await _userManager.Users
                 .Include(p => p.Photos)
                 .SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
 
-            if (user == null) return Unauthorized("Invalid username");
+            if (user == null) return Unauthorized("Invalid credentials");
 
             var result = await _signInManager
                 .CheckPasswordSignInAsync(user, loginDto.Password, false);
 
-            if (!result.Succeeded) return Unauthorized();
+            if (!result.Succeeded) return Unauthorized("Invalid credentials");
             
             return new UserDto
             {
